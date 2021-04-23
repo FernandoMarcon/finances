@@ -25,6 +25,8 @@ coming of information age.
 # Beta
 - The CAPM implies that the expected return on the ith asset is determined from its beta
 - Beta ($\beta_i$) is the regression slope coefficient when the return on the ith asset is regressed on the return on the market.
+$$\beta_i = \frac{Cov (r_i, r_{market})}{Var (r_{market})}$$
+where $r$ stands for _return_
 
 # Market Risk versus Idiosyncratic risk
 - By construction, the residuals or oerror terms in a regression are uncorrelated with the fitter or predicted value
