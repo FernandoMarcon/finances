@@ -18,3 +18,10 @@ coming of information age.
 - European Banking Authority, created 2011
 - UK, China, etc.
 - Critics of stress tests such as Anat Admati find them inadequate.
+
+# S&P 500
+- Used as a benchmark for return
+
+# Beta
+- The CAPM implies that the expected return on the ith asset is determined from its beta
+- Beta ($\beta_i$) is the regression slope coefficient when the return on the ith asset is regressed on the return on the market.
