@@ -1,3 +1,3 @@
 # finances
 
-[https://www.coursera.org/learn/financial-markets-global](Introduction to Financial Markets Course )
+[Introduction to Financial Markets Course](https://www.coursera.org/learn/financial-markets-global)
