@@ -25,3 +25,16 @@ coming of information age.
 # Beta
 - The CAPM implies that the expected return on the ith asset is determined from its beta
 - Beta ($\beta_i$) is the regression slope coefficient when the return on the ith asset is regressed on the return on the market.
+
+# Market Risk versus Idiosyncratic risk
+- By construction, the residuals or oerror terms in a regression are uncorrelated with the fitter or predicted value
+- So, the variance of the return of a stock is equal to its beta squared times the variance of tyhe market return (systematic risk) plus the variance of the residual in the regression (idiosyncratic risk)
+
+# Distributions and outliers
+- In finance, things tends to not follow the normal distribution
+- Normal vs. Cauchy (Fat-tailed) distributions
+
+## Central Limit Theorem
+- Averages of a large number of independent identically distributed shocks (whose variance is finite) are approximatelly normally distributed
+- Can fail if the underlying shocks are fat tailed
+- Can fail if the underlying shocks lose their independence

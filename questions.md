@@ -1,0 +1,3 @@
+- How to calculate the correlation between two stocks?
+- How to infer if two firms are independent?
+- Which is better: invest in correlated business or independent?
