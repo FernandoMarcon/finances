@@ -1,3 +1,7 @@
+# Source
+# https://pypi.org/project/biscoint-api-python/
+# https://github.com/Biscoint/biscoint-api-python
+
 import json
 import requests
 
@@ -36,4 +40,3 @@ try:
 except requests.exceptions.HTTPError as error:
     print(error)
     print(json.dumps(error.response.json(), indent=4))
-    
