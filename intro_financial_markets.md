@@ -42,7 +42,18 @@ where $r$ stands for _return_
 - Can fail if the underlying shocks lose their independence
 
 # Insurance
+## Fundamental Insurance Principles and Issues
 - __Risk Pooling__ is the source of all value in insurance
 - If _n_ policies, each has independent probability _p_ of a claim, then the number of claims follows the binomial distribution. The standard deviation of the fraction of policies that result in a claim is
 $$\sqrt{(1-p)/n}$$
 - _Law of large numbers_: as _n_ gets large, standard deviation approaches zero.
+- _Moral Hazards_ dealt with partially by deductions and co-insurance.
+- _Selection Bias_ dealt with by group policies, by testing and referrals, and by mandatory government insurance.
+## Radical Financial Innovation - Example I: Insurance
+- Burial societies ancient Rome, true insurance policies appeared in Italy in 14th century
+- Rapid development of actuarial theory starting in 1600s with notion of probability
+- Morris Robinson Mutual Life of NY 1840: highly-paid salesmen (agency theory)
+- Henry Hyde Equitable Life Assurance Society 1880s: large cash value (psychological framing)
+- Viviana Zelizer: challenging God, tempting fate (psychological framing)
+- Inventions copied around the world
+- Life insurance is a relic, of a day when people died young
