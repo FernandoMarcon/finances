@@ -43,3 +43,6 @@ where $r$ stands for _return_
 
 # Insurance
 - __Risk Pooling__ is the source of all value in insurance
+- If _n_ policies, each has independent probability _p_ of a claim, then the number of claims follows the binomial distribution. The standard deviation of the fraction of policies that result in a claim is
+$$\sqrt{(1-p)/n}$$
+- _Law of large numbers_: as _n_ gets large, standard deviation approaches zero.
