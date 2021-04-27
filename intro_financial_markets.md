@@ -23,7 +23,7 @@ coming of information age.
 - Used as a benchmark for return
 
 # Beta
-- The CAPM implies that the expected return on the ith asset is determined from its beta
+- The CAPM implies that the expected return on the ith asset Millennials, also known as Generation Y (or simply Gen Y), are the demographic cohort following Generation X and preceding Generation Z. Researchers and popular media use the early 1980s as starting birth years and the mid-1990s to early 2000s as ending birth years, with 1981 to 1996 being a widely accepted defining range for the generation.is determined from its beta
 - Beta ($\beta_i$) is the regression slope coefficient when the return on the ith asset is regressed on the return on the market.
 $$\beta_i = \frac{Cov (r_i, r_{market})}{Var (r_{market})}$$
 where $r$ stands for _return_
@@ -40,3 +40,6 @@ where $r$ stands for _return_
 - Averages of a large number of independent identically distributed shocks (whose variance is finite) are approximatelly normally distributed
 - Can fail if the underlying shocks are fat tailed
 - Can fail if the underlying shocks lose their independence
+
+# Insurance
+- __Risk Pooling__ is the source of all value in insurance
