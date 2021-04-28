@@ -59,4 +59,38 @@ $$\sqrt{(1-p)/n}$$
 - Life insurance is a relic, of a day when people died young
 
 # Portfolio Management: An Alternative to Insurance
+- Investment core idea: is inherintly risky, if it were not risky woudn't give you any return
+```
+ Don't put all your eggs in one basket
+```
 - Diversification of ownership
+
+## A Later Insight
+- If people are all like me, all calculating with the same data, all wanting to hold portfolios on the frontier, then they all want to hold the same portfolio (and cash)
+- so __THAT HAS TO BE THE MARKET PORTFOLIO__
+
+## Portfolio Diversification
+- All that should matter to an investor is the performance of the entire portfolio
+- Mean and variance of portfolio matter
+- Law of large numbers means that spreading over many independent assets reduces risk, has no effect on expected return
+
+# Capital Asset Pricing Model (CAPM)
+- CAPM asserts that all investors hold their optimial portfolio
+- Consequence of the mutual fund theorem: all investors hold thhe same portfolio of risky assets, the tangency portfolio
+- Therefore the CAPM says that the tangency portfolio equals the maket portfolio
+
+## Beta
+- The CAPM implies that the expected return on the ith asset is determined from its beta
+- Beta ($β_i$) is the regression slope coefficient when the return on the ith asset is regressed on the
+return on the market
+
+## Investment Companies as Providers of Diversification
+- Investment trust (before 1040s)
+- Mutual funds (especially index funds)
+- Closed end investment companies
+- Unit investment trust
+  - All these institutions can enable small investors to overcome transactions cost and lumpiness problems in achieving diversified portfolios
+
+## Doubts about Diversification
+- Complete diversification would imply holding much in fixed incomes, real state, etc. But hasn't stock market outperformed these?
+- [Risk/Return Pyramid](https://www.investopedia.com/thmb/F1dQqU5OOp9p1KpkBsNgito7J6Y=/6250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/DeterminingRiskandtheRiskPyramid3-1cc4e411548c431aa97ac24bea046770.png)
