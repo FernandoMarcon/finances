@@ -57,3 +57,6 @@ $$\sqrt{(1-p)/n}$$
 - Viviana Zelizer: challenging God, tempting fate (psychological framing)
 - Inventions copied around the world
 - Life insurance is a relic, of a day when people died young
+
+# Portfolio Management: An Alternative to Insurance
+- Diversification of ownership
