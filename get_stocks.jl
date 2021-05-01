@@ -1,9 +1,14 @@
 # Get stock prices using Julia
-# https://grollchristian.wordpress.com/2014/09/05/sp500-data-download-julia/
-a = 2;
+# http://dm13450.github.io/2020/07/05/AlphaVantage.html
 
-a
+using Pkg
+Pkg.add("DataFramesMeta")
 
-print(a)
+using AlphaVantage
+using DataFrames
+using DataFramesMeta
+using Dates
+using Plots
 
-zeros(10)
+#--- Helper Functions
+# convert between the raw data and Julia dataframes
