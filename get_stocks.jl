@@ -41,11 +41,26 @@ end
 
 #--- Stocks
 # AlphaVantage provides daily, weekly and monthly historical stock data from 2000 right up to when you call the function. With the adjusted functions you also get dividends and adjusted closing prices to account for these dividends.
-tslaRaw = AlphaVantage.time_series_daily_adjusted("TSLA", outputsize="full", datatype="csv")
-tsla = raw_to_dataframe(tslaRaw);
-first(tsla, 5)
+function getStock(stock_name)
+    stockRaw = AlphaVantage.time_series_daily_adjusted(stock_name, outputsize="full", datatype="csv")
+    stock = raw_to_dataframe(stockRaw);
+    return stock
+end
 
-plot(tsla.Date, tsla.open, label = "Open", title = "TSLA Daily")
+function plotStock(stock, stock_name)
+    plot(stock.Date, stock.open, label = "Open", title = stock_name)
+end
+
+
+market = getStock("SP&500")
+plotStock(market, "SP&500")
+
+tesla = getStock("TSLA")
+plotStock(tesla, "TSLA")
+plot(market.open, tesla.open)
+function plotStockVsMarket(stock1, stock2)
+    plot(market.open, tesla.open)
+
 
 #--- Intraday
 # What separates AlphaVantage from say google or yahoo finance data is the intraday data. They provide high frequency bars at intervals from 1 minute to an hour. The only disadvantage is that the maximum amount of data appears to be 5 days for a stock. Still better than nothing!
