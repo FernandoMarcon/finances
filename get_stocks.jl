@@ -55,3 +55,65 @@ tslaIntraDay = @where(tslaIntra, :DateTime .> DateTime(today()-Day(1)))
 subPlot = plot(tslaIntraDay.DateTime, tslaIntraDay.open, label="Open", title="TSLA Intraday $(today()-Day(1))")
 allPlot = plot(tslaIntra.DateTime, tslaIntra.open, label="Open", title = "TSLA Intraday")
 plot(allPlot, subPlot, layout=(1,2))
+
+#--- Techinical Indicators
+# Relative Strength Index
+rsiRaw = AlphaVantage.RSI("TSLA", "1min", 10, "open", datatype ="csv")
+rsiDF = DataFrame(rsiRaw[1])
+rsiDF = rename(rsiDF, Symbol.(vcat(rsiRaw[2]...)))
+rsiDF.time = DateTime.(rsiDF.time, "yyyy-mm-dd HH:MM:SS")
+rsiDF.RSI = Float64.(rsiDF.RSI)
+
+rsiSub = @where(rsiDF, :time .> DateTime(today() - Day(1)))
+plot(rsiSub[!,:time], rsiSub[!, :RSI], title = "TSLA")
+hline!([30,70], label = ["Oversold","Overbought"])
+
+
+# Sector Performance
+# AlphaVantage also provides the sector performance on a number of timescales through one API call.
+sectorRaw = AlphaVantage.sector_performance()
+sectorRaw["Rank F: Year-to-Date (YTD) Performance"]
+
+# Forex
+eurgbpRaw = AlphaVantage.fx_weekly("EUR", "GBP", datatype="csv");
+eurgbp = DataFrame(eurgbpRaw[1])
+eurgbp = rename(eurgbp, Symbol.(vcat(eurgbpRaw[2]...)))
+eurgbp.Date = Date.(eurgbp.timestamp)
+eurgbp.open = Float64.(eurgbp.open)
+eurgbp.high = Float64.(eurgbp.high)
+eurgbp.low = Float64.(eurgbp.low)
+eurgbp.close = Float64.(eurgbp.close)
+plot(eurgbp.Date, eurgbp.open, label="open", title="EURGBP")
+
+# NDF's
+usdkrwRaw = AlphaVantage.fx_monthly("USD", "KRW", datatype="csv");
+usdkrw = DataFrame(usdkrwRaw[1])
+usdkrw = rename(usdkrw, Symbol.(vcat(usdkrwRaw[2]...)))
+usdkrw.Date = Date.(usdkrw.timestamp)
+usdkrw.open = Float64.(usdkrw.open)
+usdkrw.high = Float64.(usdkrw.high)
+usdkrw.low = Float64.(usdkrw.low)
+usdkrw.close = Float64.(usdkrw.close)
+plot(usdkrw.Date, usdkrw.open, label="open", title="USDKRW")
+
+# FX Intraday
+# intraday data is available for the FX pairs.
+usdcadRaw = AlphaVantage.fx_intraday("USD", "CAD", datatype="csv");
+usdcad = DataFrame(usdcadRaw[1])
+usdcad = rename(usdcad, Symbol.(vcat(usdcadRaw[2]...)))
+usdcad.timestamp = DateTime.(usdcad.timestamp, "yyyy-mm-dd HH:MM:SS")
+usdcad.open = Float64.(usdcad.open)
+plot(usdcad.timestamp, usdcad.open, label="Open", title="USDCAD")
+
+# Crypto
+# The API follows the same style as traditional currencies and again has more digital currencies than you can shake a stick at. Again daily, weekly and monthly data is available plus a ‘health-index’ monitor that reports how healthy a cryptocurrency is based on different features.
+ethRaw = AlphaVantage.digital_currency_daily("ETH", "USD", datatype="csv")
+ethHealth = AlphaVantage.crypto_rating("ETH");
+titleString = ethHealth[""]
+
+eth = DataFrame(ethRaw[1])
+eth = rename(eth, Symbol.(vcat(ethRaw[2]...)), makeunique=true)
+eth.Date = Date.(eth.timestamp)
+eth.Open = Float64.(eth[!, Symbol("open (USD)")])
+
+plot(eth.Date, eth.Open, label="Open", title = "Ethereum")

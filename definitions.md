@@ -1,0 +1,1 @@
+RSI: Relative Strength Index is a techinical indicator intended to chart the current and historical stregth or weakness of a stock or market based on the closing prices of a recent trading period. Measures the magnitude of recent price changes to evaluate overbought or oversold conditions in the price.
