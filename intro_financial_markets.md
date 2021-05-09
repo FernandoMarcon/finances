@@ -99,4 +99,7 @@ return on the market
 - How do you own a negative quantity of a stock? → you buy the share and sell them, now you own the shares of someone else (?)
 - Brokers can enable you to hold a negative quantity of a tradable asset: they borrow the security and sell it, escrow the proceeds, you receive the proceeds, owe the security
 - [Short sales in the United States were briefly abolished in September 2008 for a list of 799 stocks.](https://www.sec.gov/news/press/2008/2008-211.htm)
-- 
+
+## In the Capital Asset Pricing Model (CAPM):
+- A stock cannot have an optimial holding value which is negative. Otherwise, everyone would be shorting, which cannot happen in equilibrium since you need an investor to provide the stock to be shorted.
+- The optimal portfolio in on the "efficient portfolio frontier"
