@@ -97,3 +97,6 @@ return on the market
 
 # Short Sales
 - How do you own a negative quantity of a stock? → you buy the share and sell them, now you own the shares of someone else (?)
+- Brokers can enable you to hold a negative quantity of a tradable asset: they borrow the security and sell it, escrow the proceeds, you receive the proceeds, owe the security
+- [Short sales in the United States were briefly abolished in September 2008 for a list of 799 stocks.](https://www.sec.gov/news/press/2008/2008-211.htm)
+- 
