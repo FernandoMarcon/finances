@@ -94,3 +94,6 @@ return on the market
 ## Doubts about Diversification
 - Complete diversification would imply holding much in fixed incomes, real state, etc. But hasn't stock market outperformed these?
 - [Risk/Return Pyramid](https://www.investopedia.com/thmb/F1dQqU5OOp9p1KpkBsNgito7J6Y=/6250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/DeterminingRiskandtheRiskPyramid3-1cc4e411548c431aa97ac24bea046770.png)
+
+# Short Sales
+- How do you own a negative quantity of a stock? → you buy the share and sell them, now you own the shares of someone else (?)
