@@ -99,6 +99,7 @@ return on the market
 - How do you own a negative quantity of a stock? → you buy the share and sell them, now you own the shares of someone else (?)
 - Brokers can enable you to hold a negative quantity of a tradable asset: they borrow the security and sell it, escrow the proceeds, you receive the proceeds, owe the security
 - [Short sales in the United States were briefly abolished in September 2008 for a list of 799 stocks.](https://www.sec.gov/news/press/2008/2008-211.htm)
+- Short selling, which is defined as the sale of a security that the seller has borrowed, is motivated by the belief that: The price of the security will decline. Buying back the security at a lower price will allow you to make a profit.
 
 ## In the Capital Asset Pricing Model (CAPM):
 - A stock cannot have an optimial holding value which is negative. Otherwise, everyone would be shorting, which cannot happen in equilibrium since you need an investor to provide the stock to be shorted.
@@ -106,5 +107,9 @@ return on the market
 
 # Gordon Growth Model
 - Myron Gordon
-- a formula that to calculate the present value of an asset that yields an infinite amount of value in the future  
-$$PV = \frac{x}{1 + r}$$
+- a formula that to calculate the present value of an asset that yields an infinite amount of value in the future
+$$PV = \frac{x}{1 + r} + \frac{x(1 + g)}{(1 + r)^2} + \frac{x(1 + g)^2}{(1 + r)^3} + ... $$
+$$PV = \frac{x}{r - g}$$
+
+
+An efficient portfolio is a combination of assets which:Achieves the highest return for a given risk.
