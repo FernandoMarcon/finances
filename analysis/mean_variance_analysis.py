@@ -78,3 +78,32 @@ weights = np.random.random(num_stocks)
 # Constrain these weights to add up to 1
 weights /= np.sum(weights)
 weights
+# Assuming that historical mean performance of the stocks making up the portfolio is the best estimator for future, i.e. expected, performance, expected portfolio return can be calculated as a product of the transpose of the weights vector and the expected returns vector of the stocks making up the portfolio.
+# Example of what the portfolio return would look like given the above weights
+ptf_r = np.sum(annual_r * weights)
+ptf_r
+
+# Given the portfolio covariance matrix computed above, the expected portfolio variance can be calculatd as the dot product of the transpose of the weights vector, the covariance matrix and the weights vector.
+# Compute portfolio variance
+ptf_var = np.dot(weights.T, np.dot(cov_matrix, weights))
+ptf_var
+
+# Using the computational concepts introduced so far we can generate many random portfolios and plot their returns against their risk (standard deviation), often referred to as volatility.
+# Define a function to generate N number of random portfolios given a DataFrame of log returns
+def generate_ptfs(returns, N):
+    ptf_rs = []
+    ptf_stds = []
+    for i in range(N):
+        weights = np.random.random(len(returns.columns))
+        weights /= np.sum(weights)
+        ptf_rs.append(np.sum(returns.mean() * weights) * 252)
+        ptf_stds.append(np.sqrt(np.dot(weights.T, np.dot(returns.cov() * 252, weights))))
+    ptf_rs = np.array(ptf_rs)
+    ptf_stds = np.array(ptf_stds)
+    return ptf_rs, ptf_stds
+
+# Comparing portfolio returns and volatilities across portfolios is made a lot easier by computing a ratio of the two measures. The most common ratio that takes into consideration is the Sharpe ratio, which is a measure of the amount of excess return an investor can expect per unit of volatility (remember this is a measure of risk) that a portfolio provides. Because we assume that investors want to maximise returns while minimising risk, the higher this ratio the better.
+# Generate the return and volatility of 5000 random portfolios
+ptf_rs, ptf_stds = generate_ptfs(log_r, 5000)
+
+# Plot the 5000 randomly generated portfolio returns
