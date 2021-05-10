@@ -103,3 +103,8 @@ return on the market
 ## In the Capital Asset Pricing Model (CAPM):
 - A stock cannot have an optimial holding value which is negative. Otherwise, everyone would be shorting, which cannot happen in equilibrium since you need an investor to provide the stock to be shorted.
 - The optimal portfolio in on the "efficient portfolio frontier"
+
+# Gordon Growth Model
+- Myron Gordon
+- a formula that to calculate the present value of an asset that yields an infinite amount of value in the future  
+$$PV = \frac{x}{1 + r}$$

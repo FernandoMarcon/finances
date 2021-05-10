@@ -106,4 +106,115 @@ def generate_ptfs(returns, N):
 # Generate the return and volatility of 5000 random portfolios
 ptf_rs, ptf_stds = generate_ptfs(log_r, 5000)
 
-# Plot the 5000 randomly generated portfolio returns
+# Plot the 5000 randomly generated portfolio returns and volatilities and colormark the respective Sharpe ratios
+plt.figure(figsize=(15,8))
+plt.scatter(ptf_stds, ptf_rs, c = (ptf_rs - 0.01)/ptf_stds, marker = 'o')
+plt.grid(True)
+plt.xlabel('Expected Volatility')
+plt.ylabel('Expected Return')
+plt.colorbar(label = 'Sharpe Ratio')
+plt.title('5000 Randomly Generated Portfolios In the Risk-Return Space')
+
+# Finding the optimal portfolios requires a constrained optimisation in which we maximise the Sharpe ratio. To begin, we need a function that returns the portfolio statistics that we computed previously, namely weights, portflio return, portfolio volatility and, based on the latter two, the portfolio Sharpe ratio.
+# Define a function that returns the portfolio statistics
+def ptf_stats(weights):
+    weights = np.array(weights)
+    ptf_r = np.sum(log_r.mean() * weights) * 252
+    ptf_std = np.sqrt(np.dot(weights.T, np.dot(log_r.cov() * 252, weights)))
+    return np.array([ptf_r, ptf_std, (ptf_r - 0.01) / ptf_std])
+
+# Import the optimize sublibrary
+import scipy.optimize as sco
+
+# Minimize the negative value of the Sharpe ratio
+def min_sharpe(weights):
+    return -ptf_stats(weights)[2]
+
+# Write the constraint that the wights have to add up to 1
+cons = ({'type':'eq', 'fun': lambda x: np.sum(x) - 1})
+
+# Bound the weights (parameter inputs) to be within 0 and 1
+bnds = tuple((0,1) for x in range(num_stocks))
+
+# Starting parameter (weights) list as equal distibution
+starting_ws = num_stocks * [1. / num_stocks, ]
+
+# Call the minimisation function
+opts = sco.minimize(min_sharpe, starting_ws, method='SLSQP', bounds = bnds, constraints=cons)
+opts
+# In the results of the optimisation, the variable x stores the weights for the stocks making up the optimal portfolio. In the case of the 30 US stocks, there seem to be quite a few stocks with weights of zero, i.e. no capital allocated to them.
+# Obtain the optimal weights
+weights_opt = opts['x'].round(3)
+weights_opt
+# Plugging these weights into the portfolio statistics function above we can get the expected return, expected volatility and Sharpe ratio of the portfolio with the optimal weights.
+# Plug optimal weights into the statistics function
+ptf_stats(weights_opt)
+# expected return:
+ptf_stats(weights_opt)[0]
+
+# expected volatility:
+ptf_stats(weights_opt)[1]
+
+# Sharpe ratio:
+ptf_stats(weights_opt)[2]
+
+# Next, we can obtain the absolute minimum variance portfolio. As the name suggests, in order to obtain this portfolio, we minimise the portfolio variance.
+# Define a function that minimises portfolio variance
+def min_var(weights):
+    return ptf_stats(weights)[1]**2
+
+# Call the optimisation function
+opt_var = sco.minimize(min_var, starting_ws, method = 'SLSQP', bounds = bnds, constraints=cons)
+opt_var
+
+# For the absolute minimum variance portfolio, more portflios are invested in or, put differently, there are less stocks with weighst of zero.
+# Obtain the optimal weigths
+weights_opt_var = opt_var['x'].round(3)
+weights_opt_var
+
+# Get the statistics for the absolute minimum variance portfolio
+ptf_stats(weights_opt_var)
+
+
+
+
+# Using the same logic applied previously, we can compute all optimal portfolios, i.e. all portflios with the maximum return for a given risk level, by iterating over multiple starting conditions.
+# Set up two conditions, one for the target return level and one for the sum of the portfolio weights
+cons2 = ({'type':'eq', 'fun':lambda x: ptf_stats(x)[0] - r},
+        {'type':'eq', 'fun':lambda x: np.sum(x) - 1})
+# The boundary condition stays the same
+bnds2 = tuple((0,1) for x in weights)
+
+# return the volatility of a portfolio given a vector of weights
+def min_port(weights):
+    return ptf_stats(weights)[1]
+
+# Get the target and volatilities given a range of returns
+def efficient_frontier(start_r, end_r, steps):
+    target_rs = np.linspace(start_r, end_r, steps)
+    target_stds = []
+    for r in target_rs:
+        cons2 = ({'type':'eq', 'fun': lambda x: ptf_stats(x)[0] - r},
+                {'type':'eq', 'fun': lambda x: np.sum(x) - 1})
+        bnds2 = tuple((0,1) for x in weights)
+        res = sco.minimize(min_port, starting_ws, method = 'SLSQP', bounds = bnds2, constraints = cons2)
+        target_stds.append(res['fun'])
+    target_stds = np.array(target_stds)
+    return target_rs, target_stds
+
+# Based on the random portfolio visualisation above it seems as though a target return of 30% would be a good upper bound
+# Obtain the target returns and volatilities based on 50 target returns
+target_rs, target_stds = efficient_frontier(0.0, 0.30, 50)
+
+# Plot the efficient frontier in the same visualisation as the randomly generted portfolios
+plt.figure(figsize=(15, 8))
+plt.scatter(ptf_stds, ptf_rs, c=(ptf_rs - 0.01) / ptf_stds, marker = 'o')
+plt.scatter(target_stds, target_rs, c = (target_rs - 0.01)/target_stds, marker = 'x')
+plt.plot(ptf_stats(opts['x'])[1], ptf_stats(opts['x'])[0], 'r*', markersize=20.0)
+plt.plot(ptf_stats(opt_var['x'])[1], ptf_stats(opt_var['x'])[0], 'b*', markersize=20.0)
+plt.grid(True)
+plt.xlabel('Expected Volatility')
+plt.ylabel('Expected Return')
+plt.xlim(0.14, 0.24)
+plt.colorbar(label = 'Sharpe Ratio')
+plt.title('Efficient Frontier Using 30 US Stocks')
