@@ -111,5 +111,25 @@ return on the market
 $$PV = \frac{x}{1 + r} + \frac{x(1 + g)}{(1 + r)^2} + \frac{x(1 + g)^2}{(1 + r)^3} + ... $$
 $$PV = \frac{x}{r - g}$$
 
+# Efficient Frontier
+- An efficient portfolio is a combination of assets which achieves the highest return for a given risk.
 
-An efficient portfolio is a combination of assets which:Achieves the highest return for a given risk.
+## [Expected Return and Variance for a Two Asset Portfolio](https://financetrain.com/expected-return-and-variance-for-a-two-asset-portfolio/)
+### Expected Return for a Two Asset Portfolio
+The expected return of a portfolio is equal to the weighted average of the returns on individual assets in the portfolio.
+
+$$R_p = w_1R_1 + w_2R_2$$
+R_p = expected return for the portfolio
+w_1 = proportion of the portfolio invested in asset 1
+R_1 = expected return of asset 1
+
+### Expected Variance for a Two Asset Portfolio
+The variance of the portfolio is calculated as follows:
+
+$$σ_p^2 = w_1^2σ_1^2 + w_2^2σ_2^2 + 2w_1w_2Cov_{1,2}$$
+
+$Cov_{1,2}$ = covariance between assets 1 and 2
+$Cov_{1,2} = ρ_{1,2} * σ_1 * σ_2$; where ρ = correlation between assets 1 and 2
+
+The above equation can be rewritten as:
+$$σ_p^2 = w_1^2σ_1^2 + w_2^2σ_2^2 + 2w_1w_2 ρ_{1,2}σ_1σ_2$$
