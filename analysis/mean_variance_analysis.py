@@ -251,3 +251,6 @@ comp.head()
 # Inspect the correlation matrix
 corr_matrix = log_r.corr()
 corr_matrix
+
+
+# Capital Market Line
