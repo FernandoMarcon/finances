@@ -1,5 +1,6 @@
 # https://towardsdatascience.com/cryptocurrencies-the-new-frontier-part-1-940e787c7ab9
 # https://towardsdatascience.com/cryptocurrencies-the-new-frontier-part-2-7218c6a489f9
+# https://github.com/JoBe10/Mean_Variance_Portfolio_Optimisation/blob/master/Efficient_Frontiers_Cryptos.ipynb
 
 # Measures in finance
 ## return: the % change in the stock price over a given ime interval
