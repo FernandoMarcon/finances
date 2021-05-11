@@ -219,3 +219,35 @@ plt.ylabel('Expected Return')
 plt.xlim(0.14, 0.24)
 plt.colorbar(label = 'Sharpe Ratio')
 plt.title('Efficient Frontier Using 30 US Stocks')
+# Blue star: the absolute minimum variance portfolio.
+# Red star: the absolute maximum Sharpe ratio portfolio.
+# Any portfolio that lies on the frontier but is below the blue star is not an optimal or efficient portfolio as it does not dominate all other portfolios in terms of expected return givven a certain risk level but rather is dominated by the others.
+
+# why is the efficient frontier so far away from the cluster of randomly selected portfolios?
+# the portfolio weights used to randomly generate the random portfolios lie between 0 and 1. This means that every stock in the portfolio has at least some positive weight.
+# in both the absolute minimum variance portflio as well as the maximum Sharpe ratio portfolio a lot of the stocks in the portflio have a weight of zero. This is because the minimisation function determined the optimal weights for each stock in the portfolio based on the stocks expected return and covariance with all other stocks. Due to the expected return and covariance profiles of some stocks, the optimal weight for those just happened to be zero.
+
+# In order to understand this further, I will use the very first set of randomly selected weights from early in this project and include its expected return and expected volatility in the above visualisation. In the visualisation below, the white star represents the portfolio based on the initially generated random weights.
+# Include the initially generated random weights
+plt.figure(figsize=(15, 8))
+plt.scatter(ptf_stds, ptf_rs, c = (ptf_rs - 0.01)/ptf_stds, marker = 'o')
+plt.scatter(target_stds, target_rs, c=( target_rs - 0.01)/target_stds, marker = 'x')
+plt.plot(ptf_stats(opts['x'])[1], ptf_stats(opts['x'])[0], 'r*', markersize=20.0)
+plt.plot(ptf_stats(opt_var['x'])[1], ptf_stats(opt_var['x'])[0], 'b*', markersize=20.0)
+plt.plot(ptf_stats(weights)[1], ptf_stats(weights)[0], 'w*', markersize=20.0)
+plt.grid(True)
+plt.xlabel('Expected Volatility')
+plt.ylabel('Expected Return')
+plt.xlim(0.14, 0.24)
+plt.colorbar(label='Sharpe Ratio')
+plt.title('Efficient Frontier Using 30 US Stocks')
+
+# portfolio composition of the maximum Sharpe ratio portfolio and the one represented by the white star.
+# Create DataFrame of the weights assigned to each ticker
+composition = {'Expected Return': annual_r.round(3), 'Maximum Sharpe':weights_opt, 'White Star':weights.round(3)}
+comp = pd.DataFrame(composition, columns = ['Expected Return', 'Maximum Sharpe', 'White Star'], index = tickers)
+comp.head()
+
+# Inspect the correlation matrix
+corr_matrix = log_r.corr()
+corr_matrix
