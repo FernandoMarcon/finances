@@ -42,3 +42,4 @@ A primeira moeda mundial descentralizada
 # Wallets
 - [Exodus](https://www.exodus.com/)
 - [Mycelium Bitcoin Wallet](https://wallet.mycelium.com/)
+- [Uniswap](https://app.uniswap.org)
