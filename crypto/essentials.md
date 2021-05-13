@@ -84,6 +84,9 @@ A primeira moeda mundial descentralizada
   - Vantagens:
       - o tesouro continua a encher-se à medida que mais e mais blocos são descobertos
       - É diretamente proporcional ao tamanho da rede. Quanto maior a rede, mais os recursos disponíveis e o sistema de votação também se torna mais descentralizado
+- [Cardano Calculator](https://antipalos.github.io/cardano-calculator/#calculator)
 
 O processo de Proof-of-Work é lento, demanda muita energia computacional e desperdiça muita energia elétrica
 Sistema PoS escolhe nós da rede para fazer a validação das transações. Estes nós são conhecidos como "slot líderes"
+
+Stake Pool remuneram quem possui tokens da momeda para quem esta na rede
