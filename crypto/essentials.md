@@ -43,3 +43,38 @@ A primeira moeda mundial descentralizada
 - [Exodus](https://www.exodus.com/)
 - [Mycelium Bitcoin Wallet](https://wallet.mycelium.com/)
 - [Uniswap](https://app.uniswap.org)
+
+# Geração de Criptomoedas
+1. Bitcoin
+2. Ethereum
+3. Cardano, criada para resolverem 3 problemas principais:
+- Escalabilidade
+- Interoperabilidade
+- Sustentabilidade
+
+# Altcoin
+## CARDANO
+- Cardano foi lançada em setembro de 2017, após 2 anos de desenvolvimento
+- Cardano foi conceituado por Charles Hoskinson, co-fundador da Etherum
+- A Fundação Cardano é uma entidade regulamentada sem fins lucrativos que é a organização de custódia de Cardano
+- Características únicas:
+  - Considerada a terceira geração das criptomoedas e a única desenvolvida por pesquisa acadêmica revisada por pares
+- Utilizam a tecnologia como Proof-of-Stake ao invés do Proof-of-Work (bitcoin)
+- Transações por banda larga
+  - No caso da cardano, eles pretendem subdividir a rede em várias sub redes → RINA (Recursive Internetwork Architecture)
+  - Cada nó fará parte de uma sub-rede específica e pode comunicar com outras sub-redes se assim for necessário.
+- Armazenamento
+  - Utiliza 3 técnicas p/ tornar o armazenamento menor:
+    - Poda
+    - Assinaturas
+    - Compressão
+- Interoperabilidade
+  - Problemas a serem superados:
+    1. Existem muitas moedas digitais
+    2. Os Bancos e Governos têm receio das criptomoedas por perder o controle
+    3. KYC (Know Your Customer)
+    4. Complience e Atomic Swaps entre as criptomoedas
+    5. Controle de metadados entre as Blockchains, levando transparencia das transações entre as diversas moedas se assim o desejar
+    6. Quantum Resistance
+O processo de Proof-of-Work é lento, demanda muita energia computacional e desperdiça muita energia elétrica
+Sistema PoS escolhe nós da rede para fazer a validação das transações. Estes nós são conhecidos como "slot líderes"
