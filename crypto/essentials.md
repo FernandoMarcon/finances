@@ -90,3 +90,6 @@ O processo de Proof-of-Work é lento, demanda muita energia computacional e desp
 Sistema PoS escolhe nós da rede para fazer a validação das transações. Estes nós são conhecidos como "slot líderes"
 
 Stake Pool remuneram quem possui tokens da momeda para quem esta na rede
+
+# Masternode
+- [MasterNode.Online](https://masternodes.online/)
