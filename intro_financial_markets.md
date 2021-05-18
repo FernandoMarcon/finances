@@ -169,7 +169,9 @@ Chile introduce the Unidad de Fomento ro create a unit of account indexed to inf
 # Equity-protected mortgages
 The concept of equity-protected mortgages consists in mortgages that include house price insurance. As an example, if the house price falls below the amount you owe, the mortgage debt will be corrected down.
 
-# Forecasting
+# Forecasting - The Efficient Markets Hypothesis
+An efficient market is defined as one in which asset prices quickly and fully reflect all available information.
+
 ## Random Walk & AR-I Models
 - Random Walk:
 $$x_t = x_{t-1} + ϵ_t$$
@@ -178,3 +180,23 @@ $$x_t=100+ρ(x_{t-1}-100) + ϵ_t$$
 Mean reverting (to 100), -1 < ρ < 1
 - Random walk as approximate implication of unpredictability of returns
 - Similarity of both random walk and AR-I to actual stock prices
+
+## Intuition of Efficiency
+- Reuter's pigeons and the telegraph
+- Beepers & the internet
+- Must be hard to get rich
+
+## Price as PDV of Expected Dividends
+The Dividend Discount Model (or Gordon Growth Model) can be stated as follows: let the investor’s discount rate be equal to r .If earnings equal dividends, and if dividends grow at the long-run rate g, then the price of the stock P can be written as follows: $P = E/(r-g)$
+- Gordon Model: If earnings equal dividends and if dividends grow at long-run rate $g$, then by growing consol model
+$$P=E/(r-g)$$
+$$P/E = 1 / (r-g)$$
+- So, efficient markets theory purports to explain why P/E varies across stocks
+- Low P/E does not mean that the stock is a "bargain", it ontly means that earnings are rationally forecasted to decrease in future
+- Efficient markets denies that any rule works
+- The price-to-earnings ratio (P/E) tell you how much investors are willing to pay per unit of a company’s earnings.
+
+## Reasons to Think Markets Ought to be Efficient
+- Marginal investor determines prices
+- Smart money dominates trading
+- Survival of the fittest
