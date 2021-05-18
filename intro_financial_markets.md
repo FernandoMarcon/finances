@@ -146,3 +146,35 @@ $$σ_p^2 = w_1^2σ_1^2 + w_2^2σ_2^2 + 2w_1w_2 ρ_{1,2}σ_1σ_2$$
 Indexing the value of debt to an index:
 - Is a better indexation method than indexing debt to a single commodity with a potentially unstable price evolution.
 - Protects investors from currency instability. Currency instability can become a concern, especially if the government prints the currency.
+
+# Real Estate Risk Management Devices
+- Value of homes is a major source of risk
+- Casualty insurance
+- Securitized mortgages
+- Home price futures and options 2006, housing.cme.com
+- Equity-protected mortgages
+
+# Limited Liability
+In his work, David Moss describes how investors’ psychology favored limited liability after the early 19th century New York experiment. In fact, the comparison between investors’ psychologies in the context of  unlimited liability and lottery tickets is asymmetrical. Unlimited liability investors tend to overestimate the minimum probability of loss, whereas in lottery tickets, they overestimate the minimum probability of win.
+
+# Inflation indexed debt
+The introduction of inflation indexed debt was motivated by:
+- An incentive to hedge from inflation volatility.
+- Historical examples of nominal debt being wiped out in real terms by high inflation.
+- An incentive to have a debt contract fixed in real terms.
+
+# Unidad de Fomento
+Chile introduce the Unidad de Fomento ro create a unit of account indexed to inflation, in order to counteract the impact of hyperinflation.
+
+# Equity-protected mortgages
+The concept of equity-protected mortgages consists in mortgages that include house price insurance. As an example, if the house price falls below the amount you owe, the mortgage debt will be corrected down.
+
+# Forecasting
+## Random Walk & AR-I Models
+- Random Walk:
+$$x_t = x_{t-1} + ϵ_t$$
+- First-order autoregressive (AR-I) Model:
+$$x_t=100+ρ(x_{t-1}-100) + ϵ_t$$
+Mean reverting (to 100), -1 < ρ < 1
+- Random walk as approximate implication of unpredictability of returns
+- Similarity of both random walk and AR-I to actual stock prices
