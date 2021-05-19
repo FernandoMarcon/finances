@@ -201,8 +201,7 @@ $$P/E = 1 / (r-g)$$
 - Smart money dominates trading
 - Survival of the fittest
 
-# Hedging
-- [source](https://www.investopedia.com/terms/h/hedge.asp)
+# [Hedging](https://www.investopedia.com/terms/h/hedge.asp)
 -  A hedge is an investment that is made with the intention of reducing the risk of adverse price movements in an asset. Normally, a hedge consists of taking an offsetting or opposite position in a related security.
 - Hedging is a strategy that tries to limit risks in financial assets.
 - Popular hedging techniques involve taking offsetting positions in derivatives that correspond to an existing position.
@@ -214,4 +213,40 @@ $$P/E = 1 / (r-g)$$
 - Derivatives can be effective hedges against their underlying assets, since the relationship between the two is more or less clearly defined.
 - It’s possible to use derivatives to set up a trading strategy in which a loss for one investment is mitigated or offset by a gain in a comparable derivative.
 - The effectiveness of a derivative hedge is expressed in terms of delta, sometimes called the "hedge ratio." Delta is the amount the price of a derivative moves per $1 movement in the price of the underlying asset.
--
+
+# Elliott Wave Theory
+- Ralph Nelson Elliott (1930)
+- Elliott believed that stock markets, generally thought to behave in a somewhat random and chaotic manner, in fact, traded in repetitive patterns.
+- Elliott proposed that financial price trends result from investors' predominant psychology.
+- He found that swings in mass psychology always showed up in the same recurring fractal patterns, or "waves," in financial markets
+- Elliott's theory somewhat resembles the Dow theory in that both recognize that stock prices move in waves. Because Elliott additionally recognized the "fractal" nature of markets, however, he was able to break down and analyze them in much greater detail.
+## Impulse and Corrective Waves
+- _impulse wave_: net travels in the same direction as the larger trend, always shows five waves in its pattern
+- Five waves move in the direction of the main trend, followed by three waves in a correction (totaling a 5-3 move). This 5-3 move then becomes two subdivisions of the next higher wave move.
+- The underlying 5-3 pattern remains constant, though the time span of each wave may vary.
+- _corrective wave_: net travels in the opposite direction of the main trend.
+- On a smaller scale, within each of the impulsive waves, five waves can again be found.
+- This next pattern repeats itself _ad infinitum_
+at ever-smaller scales.
+
+## Wave Degrees
+Elliott identified nine degrees of waves, which he labeled as follows, from largest to smallest:
+
+- Grand Super Cycle
+- Super Cycle
+- Cycle
+- Primary
+- Intermediate
+- Minor
+- Minute
+- Minuette
+- Sub-Minuette
+
+Since Elliott waves are a fractal, wave degrees theoretically expand ever-larger and ever-smaller beyond those listed above.
+
+To use the theory in everyday trading, a trader might identify an upward-trending impulse wave, go long and then sell or short the position as the pattern completes five waves and a reversal is imminent.
+
+
+
+
+Price action is divided into trends and corrections. Trends show the main direction of prices, while corrections move against the trend.
