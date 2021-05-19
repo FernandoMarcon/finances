@@ -201,7 +201,17 @@ $$P/E = 1 / (r-g)$$
 - Smart money dominates trading
 - Survival of the fittest
 
-
-## Hedging
+# Hedging
+- [source](https://www.investopedia.com/terms/h/hedge.asp)
+-  A hedge is an investment that is made with the intention of reducing the risk of adverse price movements in an asset. Normally, a hedge consists of taking an offsetting or opposite position in a related security.
+- Hedging is a strategy that tries to limit risks in financial assets.
+- Popular hedging techniques involve taking offsetting positions in derivatives that correspond to an existing position.
+- Other types of hedges can be constructed via other means like diversification. An example could be investing in both cyclical and counter-cyclical stocks.
 - Most common way of hedging in the market is through derivatives.
-- 
+
+## Derivatives
+- The underlying assets can be stocks, bonds, commodities, currencies, indices or interest rates.
+- Derivatives can be effective hedges against their underlying assets, since the relationship between the two is more or less clearly defined.
+- It’s possible to use derivatives to set up a trading strategy in which a loss for one investment is mitigated or offset by a gain in a comparable derivative.
+- The effectiveness of a derivative hedge is expressed in terms of delta, sometimes called the "hedge ratio." Delta is the amount the price of a derivative moves per $1 movement in the price of the underlying asset.
+-
