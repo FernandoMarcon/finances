@@ -200,3 +200,8 @@ $$P/E = 1 / (r-g)$$
 - Marginal investor determines prices
 - Smart money dominates trading
 - Survival of the fittest
+
+
+## Hedging
+- Most common way of hedging in the market is through derivatives.
+- 
