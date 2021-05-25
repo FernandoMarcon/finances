@@ -27,3 +27,8 @@ def buy_sell_hold(*args):
         if col < -requirement:
             return -1
     return 0
+
+def extract_featuresets(ticker):
+    tickers, df = process_data_for_labels(ticker)
+
+    df['{}_target'.format(tickert)] = list(map(buy_sell_hold, ))
