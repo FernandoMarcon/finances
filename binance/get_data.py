@@ -150,3 +150,8 @@ df = pd.DataFrame(klines, columns = ["Open_time",
 if not os.path.exists('data'):
     os.mkdir('data')
 df.to_csv("data/Binance_{}_{}_{}-{}.csv".format(symbol,interval,date_to_milliseconds(start),date_to_milliseconds(end)), index = False)
+
+
+
+
+info = client.get_all_tickers()
