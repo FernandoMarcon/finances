@@ -59,10 +59,3 @@ __HODL Strategy__: You should look for availability and great potential. The spr
 __Swing Trader__: You should look for high liquidity, trading volume, availability and low fees. You don’t need extreme low fees but still, they will cut your margin.
 
 __Day trader__: You should look for high liquidity, very high trading volume, high volatility, and extremely low spread or fees. The long-term potential is not highly important.
-
-How to calculate:
-- liquidity
-- trading volume
-- volatility
-- spread
-- fees
