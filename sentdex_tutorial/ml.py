@@ -70,7 +70,7 @@ def do_ml(ticker):
                             ])
 
     clf.fit(X_train, y_train)
-    confidence = clf.score(X_test, y_test)
+    confidence = clf.score(X_test, y_test)ada
     print('Accuracy:', confidence)
 
     predictions = clf.predict(X_test)
