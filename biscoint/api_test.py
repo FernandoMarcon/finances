@@ -8,8 +8,8 @@ import requests
 from biscoint_api_python import Biscoint
 
 api_data = {
-    'api_key': '3ddc931bf25c94ff0344a2e409aa37339e400b8d4da72265f97c3a31d0cfb36e',
-    'api_secret': 'd4c4db1567fba7dbc63b73e0a5c3a810360825a1de4530e05a77652efce91bcb',
+    'api_key': '',
+    'api_secret': '',
     
 }
 bsc = Biscoint(api_data['api_key'], api_data['api_secret'])
