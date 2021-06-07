@@ -19,3 +19,12 @@
 - Go with the first trade entry for that currency and ride it
 - Go half/half (1% and 1%)
 - Go half-risk, and leave the door open for another trade later
+
+---
+> PIP
+- Percentage in point/price interest point
+- Forex currency pairs are quoted in terms of 'pips,' short for percentage in points.
+- a pip is one-hundredth of one percent, or the fourth decimal place (0.0001).
+- Currency base pairs are typically quoted where the bid-ask spread is measured in pips.
+
+---
